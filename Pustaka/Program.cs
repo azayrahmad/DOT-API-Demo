@@ -32,6 +32,8 @@ app.UseHttpsRedirection();
 
 const string penulisCacheKey = "penulisList";
 
+app.MapGet("/", () => "Selamat datang di demo REST API Pustaka! Silakan tambahkan /swagger di akhir alamat halaman ini untuk mengakses UI Swagger.");
+
 // Endpoint API untuk Penulis
 app.MapGet("/api/penulis", async (AppDbContext context, IMemoryCache cache) =>
 {
